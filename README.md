@@ -53,6 +53,7 @@ Il faut partir d'un fichier DXF généré avec
 * **[Openscad](https://www.openscad.org/)**
 * **[Inscape](https://inkscape.org/fr/)**
 * **[qelectrotech](https://qelectrotech.org/download.html)***
+* **[Meshlab](http://www.meshlab.net/)*** conversions et corrections
 
 #### Contour (Profile)
 * **Largeur d'usinage** totale, si elle est supérieure au Ø de la fraise, plusieurs usinages parallèles seront effectués.
