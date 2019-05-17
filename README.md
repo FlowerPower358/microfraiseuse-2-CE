@@ -2,26 +2,26 @@
 Montage et améliorations
 
 ## Améliorations 
+
 1. Limitation de la surface de travail
-   1. évaluer
-   2. limitation logicielle
-   3. limitation materielle
-     * limiteur Z HS
-     * limiteur (X,Y) bloquant => coupure alimentation à remplacer par un retour à la position d'origine arret du travail en cours.
-     * centrage materiel en (X,Y), gravage de repères sur les supports
+  1. évaluer
+  2. limitation logicielle
+  3. limitation matérielle
+    * limiteur Z HS
+    * limiteur (X,Y) bloquant => coupure de l'alimentation à remplacer par un retour à la position d'origine arrêt du travail en cours.
+    * centrage matériel en (X,Y), gravure de repères sur les supports
 2. Sécurité
-   1. arrêt d'urgence manuel et à l'ouverture du capot
-   2. aspiration des poussières
+  1. arrêt d'urgence manuel et à l'ouverture du capot
+  2. aspiration des poussières
 3. Précision
-   1. entrainement des axes filetés (actuellement avec un simple couple de vis)
-     * limitation de la vitesse de plongée en fonction de la matière pour éviter les glissements
-     * ajout d'un méplat mais complexe et supprime l'effet limiteur de couple
-   2. position de repos
-     * axe Z surface du matériel via un test de conductivité
-     * axe (X,Y) via laser, limiteur de fin de course ?
-   3. aspiration des poussières
-
-
+  1. entrainement des axes filetés (actuellement avec un simple couple de vis)
+    * limitation de la vitesse de plongée en fonction de la matière pour éviter les glissements
+    * ajout d'un méplat mais complexe et supprime l'effet limiteur de couple
+  2. position de repos
+    * axe Z surface du matériel via un test de conductivité
+    * axe (X,Y) via laser, limiteurs de fins de courses ?
+  3. aspiration des poussières
+  
 ## Fraisage
 
 Uiliser le programme [GrblController](https://fr.wikipedia.org/wiki/Grbl) avec un fichier [GCode](https://fr.wikipedia.org/wiki/Programmation_de_commande_num%C3%A9rique#Langage).
