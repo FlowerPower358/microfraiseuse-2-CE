@@ -1,6 +1,27 @@
 # microfraiseuse 2 CE
 Montage et améliorations
 
+## Améliorations 
+1. Limitation de la surface de travail
+   1. évaluer
+   2. limitation logicielle
+   3. limitation materielle
+     * limiteur Z HS
+     * limiteur (X,Y) bloquant => coupure alimentation à remplacer par un retour à la position d'origine arret du travail en cours.
+     * centrage materiel en (X,Y), gravage de repères sur les supports
+2. Sécurité
+   1. arrêt d'urgence manuel et à l'ouverture du capot
+   2. aspiration des poussières
+3. Précision
+   1. entrainement des axes filetés (actuellement avec un simple couple de vis)
+     * limitation de la vitesse de plongée en fonction de la matière pour éviter les glissements
+     * ajout d'un méplat mais complexe et supprime l'effet limiteur de couple
+   2. position de repos
+     * axe Z surface du matériel via un test de conductivité
+     * axe (X,Y) via laser, limiteur de fin de course ?
+   3. aspiration des poussières
+
+
 ## Fraisage
 
 Uiliser le programme [GrblController](https://fr.wikipedia.org/wiki/Grbl) avec un fichier [GCode](https://fr.wikipedia.org/wiki/Programmation_de_commande_num%C3%A9rique#Langage).
@@ -8,7 +29,7 @@ Uiliser le programme [GrblController](https://fr.wikipedia.org/wiki/Grbl) avec u
 ### installation et configuration
 Télécharger **[GrblController 20140506](https://grbl-controller.software.informer.com/T%C3%A9l%C3%A9charger/)**, résumé en [anglais](http://www.diymachining.com/downloads/GRBL_Settings_Pocket_Guide_Rev_B.pdf). La configuration a été réalisée avec le fichier [GrblController_fr.qm](https://github.com/latelierpartage/microfraiseuse-2-CE/blob/master/GrblController_fr.qm).
 
-## codage
+## Codage
 
 ### installation
 **[CAMBAM](http://www.cambam.info/)** a été privilégié pour générer le gcode (cf [manuel](http://www.cambam.info/doc/fr/doc-cambam098l-fr-v1-34.pdf)) par rapport à
@@ -119,4 +140,4 @@ ou d'une image (Bitmap Heightmaps)
 * **Méthode additive** les parcours d'outil seront créés en mode additif pour l'utilisation avec les têtes d'extrusion. (Méthode par ajout de matière - impression 3D). Les parcours d'outil en mode additif sont générés depuis le bas vers le haut (Z), avec le niveau bas (départ) à Z = Surface pièce. Pour de bons résultats, ce réglage devrait être combiné avec une méthode Lignes de niveau - ébauche et une petite valeur pour Incrément de passe. Cette méthode est encore expérimentale.
 * **Méthode profilage 3D** Horizontal (Balayage de la pièce en X), Vertical (Balayage de la pièce en Y), Lignes de niveau – ébauche (série de lignes de niveau qui sont ensuite usinées comme une poche, chaque ligne de niveau servant de limite) Lignes de niveau -  finition (contour à chaque ligne de niveau). Note: en mode Lignes de niveau, c'est l'incrément de profondeur de passe qui détermine l'espacement vertical (Z) des lignes de niveau.
 * **Moule** un parcours d'outil en négatif est généré à partir d'une forme en positif.
-* **Style de remplissage région** contrôle le motif utilisé pour créer les trajectoires à l'intérieur d'une poche. Tous les effets de ces options sont les mêmes que pour l'option de dessin "remplissage de région" Dessiner – Remplir RégionLes options sont: Lignes horizontales, Lignes Verticales, Décalage (intérieur + extérieur) progressif de la trajectoire partant de l'extérieur vers l'intérieur et une union des trajectoires rayonnants autours des îlots, Décalage (extérieur) progressif de la trajectoire depuis l'extérieur vers l'intérieur. Décalage (intérieur) progressif autour des îlots.
+* **Style de remplissage région** contrôle le motif utilisé pour créer les trajectoires à l'intérieur d'une poche. Tous les effets de ces options sont les mêmes que pour l'option de dessin "remplissage de région" Dessiner – Remplir RégionLes options sont: Lignes horizontales, Lignes Verticales, Décalage (intérieur + extérieur) progressif de la trajectoire partant de l'extérieur vers l'intérieur et une union des trajectoires rayonnants autours des îlots, Décalage (extérieur) progressif de la trajectoire depuis l'extérieur vers l'intérieur. Décalage (intérieur) progressif autour des îlo
