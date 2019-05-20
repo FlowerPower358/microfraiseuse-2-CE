@@ -7,7 +7,7 @@ Montage et améliorations
    1. évaluer
    2. limitation logicielle
    3. limitation matérielle
-     * limiteur Z HS
+     * limiteur Z (max HS) et/ou plateau martyre ?
      * limiteur (X,Y) bloquant => coupure de l'alimentation à remplacer par un retour à la position d'origine arrêt du travail en cours.
     * centrage matériel en (X,Y), gravure de repères sur les supports
 2. Sécurité
