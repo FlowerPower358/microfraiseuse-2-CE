@@ -4,8 +4,18 @@ Montage et améliorations
 ## Améliorations 
 
 1. Limitation de la surface de travail
-   1. évaluer
-   2. limitation logicielle
+   1. évaluer (X,Y,Z)=(170,90,80)
+   2. limitation [logicielle](https://github.com/gnea/grbl/wiki/Grbl-v1.1-Configuration#22---homing-cycle-boolean)
+     * $20=1 (soft limits, bool)
+     * $22=1 (homing cycle, bool)
+     * $23=0 (homing dir invert mask:00000000)
+     * $24=25.000 (homing feed, mm/min)
+     * $25=500.000 (homing seek, mm/min)
+     * $26=250 (homing debounce, msec)
+     * $27=1.000 (homing pull-off, mm)
+     * $130=170.000 (x max travel, mm)
+     * $131=90.000 (y max travel, mm)
+     * $132=80.000 (z max travel, mm)
    3. limitation matérielle
      * limiteur Z (max HS) et/ou plateau martyre ?
      * limiteur (X,Y) bloquant => coupure de l'alimentation à remplacer par un retour à la position d'origine arrêt du travail en cours.
